@@ -1,0 +1,53 @@
+====================
+ Just a comment
+====================
+
+
+This is a comment.
+
+  $ echo "Hello" && \
+  > echo "wow"
+  Hello
+  wow
+
+Another comment.
+
+ $ echo "Wow!"
+ Wow
+
+
+------
+
+(file
+  (comment)
+  (command_line
+    (command_prefix)
+    (command))
+  (continuation_line
+    (continuation_prefix)
+    (command))
+  (output)
+  (comment)
+  (comment)
+  (comment))
+
+======================
+Language Injection
+======================
+
+Echo some OCaml
+
+  $ echo "let x = 1"
+  let x = 1
+  
+< language: ocaml
+
+----
+
+(file
+  (comment)
+  (command_line
+    (command_prefix)
+    (command))
+  (output
+    (language_specifier)))
